@@ -3,14 +3,16 @@ require('dotenv')
 
 const router = require('./router')
 
-const app =express();
+const app = express();
 
 app.use(express.json());
 
 app.use('/api', router)
-
+app.use('/', (req, res, next) => {
+    return res.send("welcome to home page")
+})
 app.use('*', (req, res, next) => {
-    next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
+    next(new Error(`Can't find ${req.originalUrl} on this server`, 404));
 });
 
-app.listen(5000, ()=>console.log(`server running on 5000`))
+app.listen(5000, () => console.log(`server running on 5000`))
