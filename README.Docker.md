@@ -19,4 +19,15 @@ Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharin
 docs for more detail on building and pushing.
 
 ### References
-* [Docker's Node.js guide](https://docs.docker.com/language/nodejs/)
+
+- [Docker's Node.js guide](https://docs.docker.com/language/nodejs/)
+
+### Notes
+
+docker init //for quick start will create files
+.dockerignore
+DockerFile
+Compose
+README.Docker.md
+
+docker compose up --build //will biuld image and run container
