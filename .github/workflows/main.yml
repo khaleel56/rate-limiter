@@ -30,7 +30,7 @@ jobs:
 
          # Step to push the image to Docker Hub
     - name: Push Docker image
-      run: docker push myusername/my-app:latest
+      run: docker push khaleel56/rate-limiter-node-app:latest
     
 
       
